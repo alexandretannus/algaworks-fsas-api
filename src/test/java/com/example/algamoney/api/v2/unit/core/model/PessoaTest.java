@@ -1,5 +1,6 @@
-package com.example.algamoney.api.v2.core.model;
+package com.example.algamoney.api.v2.unit.core.model;
 
+import com.example.algamoney.api.v2.core.model.Pessoa;
 import com.example.algamoney.api.v2.utils.factories.PessoaMockFactory;
 import org.junit.jupiter.api.Test;
 

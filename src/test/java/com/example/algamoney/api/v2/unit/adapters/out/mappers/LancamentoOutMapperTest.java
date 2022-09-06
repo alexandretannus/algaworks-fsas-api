@@ -1,7 +1,8 @@
-package com.example.algamoney.api.v2.adapters.out.mappers;
+package com.example.algamoney.api.v2.unit.adapters.out.mappers;
 
 import com.example.algamoney.api.v2.adapters.out.entity.CategoriaEntity;
 import com.example.algamoney.api.v2.adapters.out.entity.LancamentoEntity;
+import com.example.algamoney.api.v2.adapters.out.mappers.LancamentoOutMapper;
 import com.example.algamoney.api.v2.core.model.Categoria;
 import com.example.algamoney.api.v2.core.model.Lancamento;
 import com.example.algamoney.api.v2.utils.factories.CategoriaMockFactory;

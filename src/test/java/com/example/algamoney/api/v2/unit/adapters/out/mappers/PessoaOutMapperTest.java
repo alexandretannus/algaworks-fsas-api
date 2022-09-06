@@ -1,6 +1,7 @@
-package com.example.algamoney.api.v2.adapters.out.mappers;
+package com.example.algamoney.api.v2.unit.adapters.out.mappers;
 
 import com.example.algamoney.api.v2.adapters.out.entity.PessoaEntity;
+import com.example.algamoney.api.v2.adapters.out.mappers.PessoaOutMapper;
 import com.example.algamoney.api.v2.core.model.Pessoa;
 import com.example.algamoney.api.v2.utils.factories.PessoaMockFactory;
 import org.junit.jupiter.api.Test;
