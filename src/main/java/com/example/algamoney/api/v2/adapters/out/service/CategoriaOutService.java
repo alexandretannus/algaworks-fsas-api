@@ -21,4 +21,14 @@ public class CategoriaOutService implements CategoriaRepositoryPort {
         List<CategoriaEntity> list = repository.findAll();
         return CategoriaOutMapper.INSTANCE.toModelList(list);
     }
+
+    @Override
+    public Categoria salvar(Categoria categoria) {
+        CategoriaEntity categoriaEntity = CategoriaOutMapper.INSTANCE.fromModel(categoria);
+        categoriaEntity = repository.save(categoriaEntity);
+
+        return CategoriaOutMapper.INSTANCE.toModel(categoriaEntity);
+    }
+
+
 }

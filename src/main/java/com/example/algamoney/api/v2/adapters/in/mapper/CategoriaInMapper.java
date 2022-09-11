@@ -1,6 +1,7 @@
 package com.example.algamoney.api.v2.adapters.in.mapper;
 
 import com.example.algamoney.api.v2.adapters.in.dto.CategoriaDTO;
+import com.example.algamoney.api.v2.adapters.in.dto.CategoriaInputDTO;
 import com.example.algamoney.api.v2.core.model.Categoria;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
@@ -16,5 +17,7 @@ public interface CategoriaInMapper {
     CategoriaDTO toDto(Categoria model);
 
     List<CategoriaDTO> toDtoList(List<Categoria> model);
+
+    Categoria fromInputDTO(CategoriaInputDTO inputDTO);
 
 }
