@@ -16,6 +16,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 public class CategoriaOutServiceTest {
@@ -52,6 +53,26 @@ public class CategoriaOutServiceTest {
         assertNotNull(listaRetornada);
         assertEquals(2, listaRetornada.size());
         assertEquals("Despesas Básicas", listaRetornada.get(1).getNome());
+
+    }
+
+    @Test
+    void deveSalvarCorretamente() {
+        CategoriaEntity entity = CategoriaMockFactory.obterCategoriaEntityMock();
+
+        Categoria categoria = CategoriaMockFactory.obterCategoriaMock();
+        categoria.setCodigo(null);
+
+        when(repository.save(any(CategoriaEntity.class))).thenReturn(entity);
+
+        Categoria categoriaSalva = service.salvar(categoria);
+
+        assertNotNull(categoriaSalva);
+        assertNotNull(categoriaSalva.getCodigo());
+        assertEquals(categoria.getNome(), categoriaSalva.getNome());
+
+
+
 
     }
 }
