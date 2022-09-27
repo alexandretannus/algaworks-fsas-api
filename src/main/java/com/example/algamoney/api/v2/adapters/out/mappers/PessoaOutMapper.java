@@ -5,6 +5,8 @@ import com.example.algamoney.api.v2.core.model.Pessoa;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface PessoaOutMapper{
 
@@ -13,4 +15,6 @@ public interface PessoaOutMapper{
     Pessoa toModel(PessoaEntity entity);
 
     PessoaEntity fromModel(Pessoa pessoa);
+
+    List<Pessoa> toListModel(List<PessoaEntity> entityList);
 }
